@@ -10,6 +10,5 @@ public class TestClass {
         System.out.println("Hello World!");
         int val = 45;
         //Adding new commit line..
-        //Adding another line for the test
     }
 }
