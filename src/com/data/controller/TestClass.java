@@ -19,8 +19,6 @@ public class TestClass {
        }
        else {
            System.out.println("Dublicate");
-           //adding this line for the test
-           //adding another line for the testing
        }
 
     }
