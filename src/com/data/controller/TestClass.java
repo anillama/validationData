@@ -1,5 +1,8 @@
 package com.data.controller;
 
+import com.data.vo.UserDao;
+
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -14,13 +17,15 @@ public class TestClass {
 
 
     public static void main(String [] args) throws ExecutionException, InterruptedException {
-        AtomicBoolean alreaydExits = new AtomicBoolean(false);
+        Set<String> hash_Set = new HashSet<String>();
+        hash_Set.add("ANIL Lama");
+        hash_Set.add("RNU LAMA");
+        hash_Set.add("ANU Lama");
 
-        if (alreaydExits.compareAndSet(false, true)) {
-            System.out.println("True " + alreaydExits);
-        } else {
-            System.out.println("Else part");
-        }
+        UserDao userDao = new UserDao();
+        userDao.setNames(hash_Set);
+
+        System.out.println("Hee " + userDao.getNames());
 
     }
 }

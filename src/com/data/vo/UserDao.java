@@ -1,5 +1,8 @@
 package com.data.vo;
 
+import java.util.Set;
+import java.util.stream.Collectors;
+
 public class UserDao {
 
     private String firstName;
@@ -7,6 +10,16 @@ public class UserDao {
     private String userAddre;
     private String userPhone;
     private String userPassword;
+    private Set<String> names;
+
+    public Set<String> getNames() {
+        return names;
+    }
+
+    public void setNames(Set<String> names) {
+        Set <String> name = names.stream().filter(num -> num.startsWith("AN")).collect(Collectors.toSet());
+        this.names = name;
+    }
 
     public String getFirstName() {
         return firstName;
